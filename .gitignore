@@ -1,0 +1,5 @@
+config.py
+punishments.db
+__pycache__/
+venv/
+.idea/
