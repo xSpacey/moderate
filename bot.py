@@ -1,3 +1,4 @@
+from discord import Intents
 from discord.ext import commands
 
 import database.database_sqlite3 as db
@@ -5,12 +6,16 @@ from config import TOKEN, PREFIX, COGS
 
 bot = commands.Bot(command_prefix=PREFIX)
 
+intents = Intents.default()
+intents.members = True
+
 
 class Moderate(commands.Bot):
     def __init__(self):
         super().__init__(command_prefix=PREFIX,
                          description="Moderation bot",
-                         reconnect=True)
+                         reconnect=True,
+                         intents=intents)
         self.bot = bot
 
     async def on_ready(self):

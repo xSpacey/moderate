@@ -2,14 +2,16 @@
 
 moderate is a Discord moderation bot designed to be simple, lightweight and configurable.
 
-Built using Discord.py. Uses SQLite3 for simple database storage.
+Built using Discord.py 1.5.x - uses SQLite3 for simple database storage.
 
 ## Installation
-**Requires Python 3.6+, tested with 3.7**
+**Requires Python 3.6+**
 
 Install dependencies:
 
 `pip install -r requirements.txt`
+
+The bot also requires the `Members` privileged intent to be enabled.
 
 If you want mutes to be functional, you'll need to create a role called 'Muted' and manually disable 'Send Messages' in each channel.
 
